@@ -1,0 +1,219 @@
+{
+  "brand": {
+    "name": "InnovaApps",
+    "tagline": "studio • plugins • apps",
+    "domain": "innovaapps.ca"
+  },
+  "background": {
+    "mode": "three",
+    "note": "Options: three | holo"
+  },
+  "hero": {
+    "title": "",
+    "accent": "InnovaApps",
+    "tail": "builds apps, plugins, and web products.",
+    "subtitle": "A product studio where we ship our own ideas, including apps, plugins, and web experiences, using a scalable, motion-first system. We also take on a small number of collaborations when it’s a strong fit.",
+    "ctaPrimary": "View apps",
+    "ctaSecondary": "How we build"
+  },
+  "featuredApps": {
+    "eyebrow": "Now building",
+    "title": "What’s live under the Innova umbrella",
+    "desc": "A snapshot of current builds. Some are public and some are in progress. Everything is created to test real usage and iterate fast.",
+    "cta": "Explore the directory",
+    "items": [
+      {
+        "name": "Humberto AI",
+        "status": "Live",
+        "metricValue": "Live",
+        "metricLabel": "product under active iteration",
+        "metricNote": "Flagship build. Improving weekly."
+      },
+      {
+        "name": "Plugin Studio",
+        "status": "Shipping",
+        "metricValue": "Shipping",
+        "metricLabel": "new utilities and experiments",
+        "metricNote": "Small tools with big polish."
+      },
+      {
+        "name": "Innova Cloud",
+        "status": "In progress",
+        "metricValue": "In progress",
+        "metricLabel": "shared services layer",
+        "metricNote": "Auth, analytics, and deployments."
+      }
+    ]
+  },
+  "work": {
+    "eyebrow": "How it’s organized",
+    "title": "One hub. Many products.",
+    "desc": "InnovaApps is the studio home. Individual products can launch under the umbrella first. When it earns it, the product can graduate into its own brand.",
+    "hubTitle": "The studio hub",
+    "hubDesc": "innovaapps.ca is the umbrella site for studio overview, product directory, docs, notes, and announcements. Keep it clean, calm, and evergreen.",
+    "growTitle": "The grow up path",
+    "growDesc": "New products can start as a subdomain MVP. When traction is real, we split it to its own domain, billing, and roadmap."
+  },
+  "stack": {
+    "eyebrow": "What it’s built with",
+    "title": "A clean system for apps, plugins, and websites",
+    "desc": "React plus a reusable UI system built to ship fast without sacrificing polish. Motion, components, and structure are shared across products."
+  },
+  "motionGuide": {
+    "eyebrow": "Motion guide",
+    "title": "Motion that feels premium and not loud",
+    "desc": "Consistent motion rules keep interactions crisp, readable, and intentional, especially on light UI.",
+    "principles": [
+      {
+        "title": "Fast in, soft out",
+        "desc": "Small UI responses happen quickly, then ease out for polish.",
+        "tokens": ["180–260ms", "easeOut", "spring: 220/18"]
+      },
+      {
+        "title": "Depth, not bounce",
+        "desc": "Use subtle lift and glow instead of overshoot and wobble.",
+        "tokens": ["hover: -6px", "shadow: glow", "opacity: 0.85"]
+      },
+      {
+        "title": "Scroll reveals",
+        "desc": "Sections reveal on entry with a consistent offset and calm timing.",
+        "tokens": ["y: 12", "duration: 0.6s", "once: true"]
+      },
+      {
+        "title": "Pointer parallax",
+        "desc": "Keep parallax subtle and responsive to reduce fatigue.",
+        "tokens": ["offset: 0.4", "stiffness: 60", "mass: 0.6"]
+      }
+    ]
+  },
+  "apps": {
+    "eyebrow": "Directory",
+    "title": "Explore what the studio is building",
+    "desc": "Apps, plugins, and web products. Some are live and some are experimental. Everything is built to learn fast and scale cleanly.",
+    "ctaTitle": "Want to collaborate?",
+    "ctaDesc": "We occasionally partner with founders and teams when the fit is strong. This is especially true for motion first landing pages, plugin concepts, and MVP launches.",
+    "ctaPrimary": "Start a conversation",
+    "ctaSecondary": "Back to top",
+    "ctaExplore": "Explore all apps"
+  },
+  "contact": {
+    "eyebrow": "Collaborate",
+    "title": "Have something worth building?",
+    "desc": "Share what you’re working on. If it fits the studio’s direction, we’ll reply with next steps.",
+    "tip": "Tip: Replace alerts with your email capture / backend when ready."
+  },
+  "socialProof": {
+    "eyebrow": "Studio signal",
+    "title": "Built in public. Proof over hype.",
+    "desc": "This studio is product first. We ship, measure, refine, and graduate what wins. Case studies and metrics get added as products mature.",
+    "logos": ["Humberto AI", "InnovaApps Studio"],
+    "testimonials": [
+      {
+        "name": "InnovaApps",
+        "role": "Studio note",
+        "quote": "We keep the UI system consistent across apps so shipping faster doesn’t mean starting over."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Humberto AI",
+        "metric": "Live",
+        "summary": "Flagship build under active iteration and polish."
+      },
+      {
+        "title": "Plugin Studio",
+        "metric": "Shipping",
+        "summary": "Rapid experiments and utilities with a shared design system."
+      },
+      {
+        "title": "Innova Cloud",
+        "metric": "In progress",
+        "summary": "Shared infrastructure to support every product under the umbrella."
+      }
+    ]
+  },
+  "story": {
+    "eyebrow": "Studio story",
+    "title": "A studio designed to keep shipping",
+    "desc": "InnovaApps exists to build and evolve products without losing polish, from first MVP to standalone brand.",
+    "panelTitle": "How the studio works",
+    "panelDesc": "We build in validated steps. We ship something small, learn from real usage, then expand into a full product surface.",
+    "highlights": [
+      {
+        "title": "Start small",
+        "desc": "Launch a plugin, landing page, or MVP quickly with a premium baseline."
+      },
+      {
+        "title": "Prove value",
+        "desc": "Measure real usage and refine the product before scaling complexity."
+      },
+      {
+        "title": "Graduate winners",
+        "desc": "When a product earns it, it becomes its own world with domain, billing, and roadmap."
+      }
+    ],
+    "stats": [
+      { "value": "3", "label": "Core product tracks" },
+      { "value": "1", "label": "Flagship live build" },
+      { "value": "∞", "label": "Ideas in the pipeline" }
+    ]
+  },
+  "conversion": {
+    "eyebrow": "Next steps",
+    "title": "Explore, follow, or collaborate",
+    "desc": "Choose the path that matches what you’re here for. See what’s built, keep up with launches, or propose a collaboration.",
+    "panelTitle": "Want to work together?",
+    "panelDesc": "If your idea fits the studio’s direction, we can help with MVPs, plugins, or motion first web builds.",
+    "ctaPrimary": "Start a conversation",
+    "ctaSecondary": "View the directory",
+    "ctaTertiary": "Follow updates"
+  },
+  "footer": {
+    "note": "Built with React + Motion"
+  },
+  "appsList": [
+    {
+      "name": "Humberto AI",
+      "slug": "humberto-ai",
+      "status": "Live",
+      "blurb": "A flagship build under the Innova umbrella, shipped, iterated, and improved in public.",
+      "tagline": "AI experiences with premium UX.",
+      "description": "Humberto AI is a flagship product built inside the studio. It starts under the Innova umbrella and can evolve into a standalone brand as it grows.",
+      "features": [
+        "Context-aware AI workflows",
+        "Plugin-ready architecture",
+        "Motion-first UI system",
+        "Scalable path to standalone"
+      ],
+      "url": "https://humberto.ai"
+    },
+    {
+      "name": "Plugin Studio",
+      "slug": "plugin-studio",
+      "status": "Shipping",
+      "blurb": "Small utilities, shipped fast, kept polished through a shared system.",
+      "tagline": "A factory for useful tools.",
+      "description": "Plugin Studio is where fast ideas become real tools. It’s the experimentation engine for InnovaApps and the place where plugins become products.",
+      "features": [
+        "Rapid iteration pipeline",
+        "Reusable UI and motion system",
+        "Launch-ready templates",
+        "Telemetry-ready structure"
+      ]
+    },
+    {
+      "name": "Innova Cloud",
+      "slug": "innova-cloud",
+      "status": "In progress",
+      "blurb": "Shared auth, analytics, and deployments for the studio ecosystem.",
+      "tagline": "Shared services for every build.",
+      "description": "Innova Cloud unifies common infrastructure across products so each new build starts with a production grade foundation.",
+      "features": [
+        "Unified auth",
+        "Analytics and insights",
+        "Shared deployments",
+        "Multi product observability"
+      ]
+    }
+  ]
+}
