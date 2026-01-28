@@ -1,12 +1,12 @@
 // Page: apps directory listing.
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-import Container from "../components/layout/Container";
-import SectionTitle from "../components/ui/SectionTitle";
-import AppTiles from "../components/AppTiles";
-import { siteContent } from "../data/site";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import Container from "../../components/layout/Container";
+import SectionTitle from "../../components/ui/SectionTitle";
+import AppTiles from "../../components/AppTiles";
+import { siteContent } from "../../data/site";
 
-export default function AppsPage() {
+export default function DirectoryPage() {
   return (
     <div className="min-h-screen text-white">
       <Nav />

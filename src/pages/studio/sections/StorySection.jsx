@@ -1,13 +1,13 @@
 // Home section: studio story.
 import { motion } from "framer-motion";
-import SectionTitle from "../components/ui/SectionTitle";
-import { siteContent } from "../data/site";
-import SectionGlow from "../components/effects/SectionGlow";
-import SectionScrollFx from "../components/effects/SectionScrollFx";
+import SectionTitle from "../../../components/ui/SectionTitle";
+import { siteContent } from "../../../data/site";
+import SectionGlow from "../../../components/effects/SectionGlow";
+import SectionScrollFx from "../../../components/effects/SectionScrollFx";
 
 export default function StorySection() {
   return (
-    <section id="story" className="relative pt-20">
+    <section id="story" className="section-band section-band--cyan relative pt-20">
       <SectionGlow variant="cyan" drift={24} />
       <SectionScrollFx distance={20} rotate={0.25} scale={1.015} enabled={false}>
         <SectionTitle
@@ -18,7 +18,7 @@ export default function StorySection() {
 
         <div className="mt-10 grid gap-4 lg:grid-cols-12">
           <motion.div
-            className="relative rounded-3xl border border-cyan-300/40 bg-white p-6 lg:col-span-7 shadow-[0_0_40px_rgba(56,189,248,0.16)]"
+            className="relative overflow-hidden rounded-3xl border border-cyan-300/40 bg-white p-6 lg:col-span-7 shadow-[0_0_40px_rgba(56,189,248,0.16)]"
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}

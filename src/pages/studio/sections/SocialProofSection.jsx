@@ -1,13 +1,13 @@
 // Home section: social proof.
 import { motion } from "framer-motion";
-import SectionTitle from "../components/ui/SectionTitle";
-import { siteContent } from "../data/site";
-import SectionGlow from "../components/effects/SectionGlow";
-import SectionScrollFx from "../components/effects/SectionScrollFx";
+import SectionTitle from "../../../components/ui/SectionTitle";
+import { siteContent } from "../../../data/site";
+import SectionGlow from "../../../components/effects/SectionGlow";
+import SectionScrollFx from "../../../components/effects/SectionScrollFx";
 
 export default function SocialProofSection() {
   return (
-    <section id="proof" className="relative pt-20">
+    <section id="proof" className="section-band section-band--emerald relative pt-20">
       <SectionGlow variant="fuchsia" drift={36} />
       <SectionScrollFx distance={26} rotate={-0.35} skewY={0.45} enabled={false}>
         <SectionTitle

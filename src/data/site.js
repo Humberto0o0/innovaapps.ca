@@ -58,14 +58,14 @@ export const marqueeWords = [
 export const appTiles = content.appsList;
 
 export const workFeatures = [
-  "Landing + directory",
-  "Shared components",
-  "Docs + changelog",
-  "Contact + intake",
+  "Product discovery",
+  "Central directory",
+  "Shared UI components",
+  "Documentation and intake",
 ];
 
 export const growPhases = [
-  { k: "Phase 1", v: "Single Stripe, rapid iteration" },
-  { k: "Phase 2", v: "Separate domain + pipeline" },
-  { k: "Phase 3", v: "Product-led scaling" },
+  { k: "Phase 1", v: "Studio MVP with shared infrastructure" },
+  { k: "Phase 2", v: "Independent domain and product pipeline" },
+  { k: "Phase 3", v: "Dedicated brand and product scaling" },
 ];

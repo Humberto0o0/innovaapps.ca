@@ -1,15 +1,15 @@
 // Home section: conversion/CTA panel.
 import { motion } from "framer-motion";
-import SectionTitle from "../components/ui/SectionTitle";
-import Button from "../components/ui/Button";
-import ButtonLink from "../components/ui/ButtonLink";
-import { siteContent } from "../data/site";
-import SectionGlow from "../components/effects/SectionGlow";
-import SectionScrollFx from "../components/effects/SectionScrollFx";
+import SectionTitle from "../../../components/ui/SectionTitle";
+import Button from "../../../components/ui/Button";
+import ButtonLink from "../../../components/ui/ButtonLink";
+import { siteContent } from "../../../data/site";
+import SectionGlow from "../../../components/effects/SectionGlow";
+import SectionScrollFx from "../../../components/effects/SectionScrollFx";
 
 export default function ConversionSection() {
   return (
-    <section id="cta" className="relative overflow-hidden pt-20">
+    <section id="cta" className="section-band section-band--fuchsia relative overflow-hidden pt-20">
       <SectionGlow variant="blue" drift={20} />
       <SectionScrollFx distance={18} rotate={-0.3} scale={1.01} enabled={false}>
         <SectionTitle
@@ -33,11 +33,12 @@ export default function ConversionSection() {
             <div className="flex flex-wrap gap-2">
               <Button
                 variant="ghost"
+                className="directory-cta-ghost"
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 {siteContent.conversion.ctaPrimary}
               </Button>
-              <ButtonLink to="/apps" variant="ghost">
+              <ButtonLink to="/apps" variant="ghost" className="directory-cta-ghost">
                 {siteContent.conversion.ctaSecondary}
               </ButtonLink>
               <Button

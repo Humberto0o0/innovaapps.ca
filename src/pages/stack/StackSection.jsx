@@ -1,13 +1,13 @@
 // Home section: stack and upgrades.
 import { motion } from "framer-motion";
-import SectionTitle from "../components/ui/SectionTitle";
-import { siteContent } from "../data/site";
-import SectionGlow from "../components/effects/SectionGlow";
-import SectionScrollFx from "../components/effects/SectionScrollFx";
+import SectionTitle from "../../components/ui/SectionTitle";
+import { siteContent } from "../../data/site";
+import SectionGlow from "../../components/effects/SectionGlow";
+import SectionScrollFx from "../../components/effects/SectionScrollFx";
 
 export default function StackSection() {
   return (
-    <section id="stack" className="relative overflow-hidden pt-20">
+    <section id="stack" className="section-band section-band--fuchsia relative overflow-hidden pt-20">
       <SectionGlow variant="fuchsia" drift={28} />
       <SectionScrollFx distance={20} rotate={0.25} skewX={0.5} enabled={false}>
         <SectionTitle

@@ -62,7 +62,7 @@ export default function TiltCard({ icon: Icon, title, desc, tag, tone = "blue" }
       onPointerLeave={reducedMotion ? undefined : onLeave}
       style={{ transformStyle: "preserve-3d" }}
       className={cx(
-        "relative rounded-3xl border bg-white/90 p-6 shadow-[0_0_40px_rgba(56,189,248,0.16)]",
+        "relative rounded-3xl border bg-white p-6 shadow-[0_0_40px_rgba(56,189,248,0.16)]",
         borderClass
       )}
       whileHover={
@@ -83,17 +83,17 @@ export default function TiltCard({ icon: Icon, title, desc, tag, tone = "blue" }
         transition={{ type: "spring", stiffness: 220, damping: 22 }}
       >
         <div className="flex items-start justify-between gap-4">
-          <div className={cx("flex h-12 w-12 items-center justify-center rounded-2xl bg-white/90 border", borderClass)}>
+          <div className={cx("flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 border", borderClass)}>
             <Icon className={cx("h-6 w-6", iconClass)} />
           </div>
-          <span className={cx("rounded-full border bg-white/90 px-3 py-1 text-xs", badgeClass)}>
+          <span className={cx("rounded-full border bg-white/95 px-3 py-1 text-xs", badgeClass)}>
             {tag}
           </span>
         </div>
         <h3 className="mt-4 text-lg font-semibold text-slate-900">{title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">{desc}</p>
+        <p className="mt-2 text-sm leading-relaxed tilt-desc">{desc}</p>
 
-        <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-700">
+        <div className="mt-6 flex items-center gap-2 text-sm font-semibold tilt-explore">
           <span className="opacity-80">Explore</span>
           <ArrowRight className="h-4 w-4" />
         </div>

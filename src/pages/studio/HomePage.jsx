@@ -1,20 +1,20 @@
 // Page: home layout and section ordering.
 import { MotionConfig, motion, useScroll, useSpring } from "framer-motion";
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import WorkSection from "../sections/WorkSection";
-import StackSection from "../sections/StackSection";
-import AppsSection from "../sections/AppsSection";
-import ContactSection from "../sections/ContactSection";
-import Footer from "../components/Footer";
-import { useRafMouse } from "../hooks/useRafMouse";
-import Container from "../components/layout/Container";
-import FeaturedAppsSection from "../sections/FeaturedAppsSection";
-import MotionGuideSection from "../sections/MotionGuideSection";
-import SocialProofSection from "../sections/SocialProofSection";
-import StorySection from "../sections/StorySection";
-import ConversionSection from "../sections/ConversionSection";
-import { useMotionSettings } from "../context/MotionSettings";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import { useRafMouse } from "../../hooks/useRafMouse";
+import Container from "../../components/layout/Container";
+import { useMotionSettings } from "../../context/MotionSettings";
+import Hero from "./sections/Hero";
+import WorkSection from "../work/WorkSection";
+import FeaturedAppsSection from "./sections/FeaturedAppsSection";
+import StackSection from "../stack/StackSection";
+import MotionGuideSection from "./sections/MotionGuideSection";
+import AppsSection from "../apps/AppsSection";
+import SocialProofSection from "./sections/SocialProofSection";
+import StorySection from "./sections/StorySection";
+import ConversionSection from "./sections/ConversionSection";
+import ContactSection from "../contact/ContactSection";
 
 export default function HomePage() {
   const { reducedMotion } = useMotionSettings();

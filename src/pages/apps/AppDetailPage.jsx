@@ -1,11 +1,11 @@
 // Page: app detail view.
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-import Container from "../components/layout/Container";
-import ButtonLink from "../components/ui/ButtonLink";
-import { appTiles } from "../data/site";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import Container from "../../components/layout/Container";
+import ButtonLink from "../../components/ui/ButtonLink";
+import { appTiles } from "../../data/site";
 
 export default function AppDetailPage() {
   const { slug } = useParams();

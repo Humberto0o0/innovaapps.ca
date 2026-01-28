@@ -23,36 +23,36 @@
     "cta": "Explore the directory",
     "items": [
       {
-        "name": "Humberto AI",
+        "name": "My Perfect Routine",
         "status": "Live",
         "metricValue": "Live",
-        "metricLabel": "product under active iteration",
-        "metricNote": "Flagship build. Improving weekly."
+        "metricLabel": "A focused habit and routine tracking app available on the App Store.",
+        "metricNote": "Built to support consistency without overwhelm."
       },
       {
         "name": "Plugin Studio",
         "status": "Shipping",
         "metricValue": "Shipping",
-        "metricLabel": "new utilities and experiments",
+        "metricLabel": "New utilities and experiments",
         "metricNote": "Small tools with big polish."
       },
       {
-        "name": "Innova Cloud",
+        "name": "Humberto AI",
         "status": "In progress",
         "metricValue": "In progress",
-        "metricLabel": "shared services layer",
-        "metricNote": "Auth, analytics, and deployments."
+        "metricLabel": "An AI assistant for WordPress.",
+        "metricNote": "Uses retrieval augmented generation for accurate and contextual answers."
       }
     ]
   },
   "work": {
     "eyebrow": "How it’s organized",
     "title": "One hub. Many products.",
-    "desc": "InnovaApps is the studio home. Individual products can launch under the umbrella first. When it earns it, the product can graduate into its own brand.",
+    "desc": "InnovaApps is the central studio where ideas launch, mature, and scale. Products start small, validate quickly, and grow into standalone brands when they’re ready.",
     "hubTitle": "The studio hub",
-    "hubDesc": "innovaapps.ca is the umbrella site for studio overview, product directory, docs, notes, and announcements. Keep it clean, calm, and evergreen.",
+    "hubDesc": "InnovaApps is the central home where products are introduced, documented, and maintained over time.",
     "growTitle": "The grow up path",
-    "growDesc": "New products can start as a subdomain MVP. When traction is real, we split it to its own domain, billing, and roadmap."
+    "growDesc": "Products begin inside the studio, prove their value, and earn independence as they grow."
   },
   "stack": {
     "eyebrow": "What it’s built with",
@@ -106,7 +106,7 @@
     "eyebrow": "Studio signal",
     "title": "Built in public. Proof over hype.",
     "desc": "This studio is product first. We ship, measure, refine, and graduate what wins. Case studies and metrics get added as products mature.",
-    "logos": ["Humberto AI", "InnovaApps Studio"],
+    "logos": ["My Perfect Routine APP", "InnovaApps Studio"],
     "testimonials": [
       {
         "name": "InnovaApps",
@@ -116,7 +116,7 @@
     ],
     "caseStudies": [
       {
-        "title": "Humberto AI",
+        "title": "My Perfect Routine APP",
         "metric": "Live",
         "summary": "Flagship build under active iteration and polish."
       },
@@ -173,12 +173,12 @@
   },
   "appsList": [
     {
-      "name": "Humberto AI",
+      "name": "My Perfect Routine APP",
       "slug": "humberto-ai",
       "status": "Live",
       "blurb": "A flagship build under the Innova umbrella, shipped, iterated, and improved in public.",
       "tagline": "AI experiences with premium UX.",
-      "description": "Humberto AI is a flagship product built inside the studio. It starts under the Innova umbrella and can evolve into a standalone brand as it grows.",
+      "description": "My Perfect Routine APP is a flagship product built inside the studio. It starts under the Innova umbrella and can evolve into a standalone brand as it grows.",
       "features": [
         "Context-aware AI workflows",
         "Plugin-ready architecture",

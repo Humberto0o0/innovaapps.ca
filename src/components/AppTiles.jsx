@@ -12,7 +12,7 @@ export default function AppTiles({ limit, variant = "compact" }) {
       {items.map((it, i) => (
         <motion.div
           key={it.name}
-          className="relative rounded-3xl border border-cyan-300/40 bg-white p-6 shadow-[0_0_40px_rgba(56,189,248,0.16)]"
+          className="relative overflow-hidden rounded-3xl border border-cyan-300/40 bg-white p-6 shadow-[0_0_40px_rgba(56,189,248,0.16)]"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}

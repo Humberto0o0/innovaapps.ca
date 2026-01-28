@@ -1,9 +1,9 @@
 // App routes and top-level providers.
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import HomePage from "./pages/HomePage";
-import AppsPage from "./pages/AppsPage";
-import AppDetailPage from "./pages/AppDetailPage";
+import HomePage from "./pages/studio/HomePage";
+import AppsPage from "./pages/apps/AppsPage";
+import AppDetailPage from "./pages/apps/AppDetailPage";
 import { MotionSettingsProvider } from "./context/MotionSettings";
 
 function ScrollToHash() {

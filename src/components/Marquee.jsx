@@ -11,7 +11,7 @@ export default function Marquee({ words = [] }) {
     : { duration: 32, ease: "linear", repeat: Infinity };
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 py-5">
+    <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/12 py-5">
       <div className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_right,transparent,rgba(0,0,0,1),transparent)]" />
       <motion.div className="flex w-max gap-4 px-6" animate={animate} transition={transition}>
         {line.map((w, i) => (

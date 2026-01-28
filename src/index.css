@@ -14,6 +14,17 @@
 html {
 	scroll-behavior: smooth;
 	min-height: 100%;
+	overflow-x: hidden;
+	width: 100%;
+	background:
+		radial-gradient(1200px 700px at 10% 0%, rgba(56, 189, 248, 0.12), transparent 60%),
+		radial-gradient(900px 700px at 90% 10%, rgba(217, 70, 239, 0.12), transparent 60%),
+		radial-gradient(900px 700px at 20% 70%, rgba(59, 130, 246, 0.12), transparent 60%),
+		linear-gradient(180deg, rgba(7, 10, 18, 1) 0%, rgba(9, 12, 22, 1) 55%, rgba(11, 15, 28, 1) 100%);
+}
+
+:root[data-theme="light"] {
+	color-scheme: light;
 	background:
 		radial-gradient(1200px 700px at 10% 0%, rgba(56, 189, 248, 0.12), transparent 60%),
 		radial-gradient(900px 700px at 90% 10%, rgba(217, 70, 239, 0.08), transparent 60%),
@@ -25,53 +36,262 @@ body {
 	@apply text-white antialiased overflow-x-hidden;
 	margin: 0;
 	background: transparent;
+	color: #e2e8f0;
+	min-height: 100dvh;
+	width: 100%;
+}
+
+:root[data-theme="light"] body {
 	color: #0b0b0b;
 }
 
+#root {
+	min-height: 100dvh;
+	width: 100%;
+	overflow-x: clip;
+}
+
+/* Dark theme overrides for common light utility classes */
+:root[data-theme="dark"] .bg-white {
+	background-color: rgba(12, 18, 30, 0.95) !important;
+}
+:root[data-theme="dark"] .bg-slate-50 {
+	background-color: rgba(15, 23, 42, 0.6) !important;
+}
+:root[data-theme="dark"] .bg-black\/40 {
+	background-color: rgba(2, 6, 23, 0.7) !important;
+}
+:root[data-theme="dark"] .bg-black\/30 {
+	background-color: rgba(2, 6, 23, 0.55) !important;
+}
+:root[data-theme="dark"] .bg-black\/25 {
+	background-color: rgba(2, 6, 23, 0.45) !important;
+}
+:root[data-theme="dark"] .bg-black\/20 {
+	background-color: rgba(2, 6, 23, 0.35) !important;
+}
+:root[data-theme="dark"] .bg-black\/10 {
+	background-color: rgba(2, 6, 23, 0.25) !important;
+}
+:root[data-theme="dark"] .text-slate-900 {
+	color: #f8fafc !important;
+}
+:root[data-theme="dark"] .text-slate-800 {
+	color: #e2e8f0 !important;
+}
+:root[data-theme="dark"] .text-slate-700 {
+	color: #cbd5e1 !important;
+}
+:root[data-theme="dark"] .text-slate-600 {
+	color: #94a3b8 !important;
+}
+:root[data-theme="dark"] .text-slate-500 {
+	color: #64748b !important;
+}
+
 /* Light theme overrides for existing dark utility classes */
-.text-white {
+:root[data-theme="light"] .text-white {
 	color: #0b0b0b !important;
 }
-.text-white\/80 {
+:root[data-theme="light"] .text-white\/80 {
 	color: rgba(15, 23, 42, 0.8) !important;
 }
-.text-white\/70 {
+:root[data-theme="light"] .text-white\/70 {
 	color: rgba(15, 23, 42, 0.7) !important;
 }
-.text-white\/60 {
+:root[data-theme="light"] .text-white\/60 {
 	color: rgba(15, 23, 42, 0.6) !important;
 }
-.text-white\/50 {
+:root[data-theme="light"] .text-white\/50 {
 	color: rgba(15, 23, 42, 0.55) !important;
 }
-.text-white\/40 {
+:root[data-theme="light"] .text-white\/40 {
 	color: rgba(15, 23, 42, 0.45) !important;
 }
 
-.bg-black\/40 {
+:root[data-theme="light"] .bg-black\/40 {
 	background-color: rgba(255, 255, 255, 0.9) !important;
 }
-.bg-black\/30 {
+:root[data-theme="light"] .bg-black\/30 {
 	background-color: rgba(15, 23, 42, 0.12) !important;
 }
-.bg-black\/25 {
+:root[data-theme="light"] .bg-black\/25 {
 	background-color: rgba(15, 23, 42, 0.1) !important;
 }
-.bg-black\/20 {
+:root[data-theme="light"] .bg-black\/20 {
 	background-color: rgba(15, 23, 42, 0.09) !important;
 }
-.bg-black\/10 {
+:root[data-theme="light"] .bg-black\/10 {
 	background-color: rgba(15, 23, 42, 0.06) !important;
 }
-.bg-white\/5 {
+:root[data-theme="light"] .bg-white\/5 {
 	background-color: rgba(255, 255, 255, 0.75) !important;
 }
-.bg-white\/10 {
+:root[data-theme="light"] .bg-white\/10 {
 	background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
+/* Section title gradient tuning (night mode) */
+:root[data-theme="dark"] .section-title-gradient {
+	background-image: linear-gradient(90deg, #67e8f9, #f8fafc, #e879f9);
+}
+
+/* Nav tuning (night mode) */
+:root[data-theme="dark"] .nav-surface {
+	background-color: rgba(7, 12, 20, 0.78) !important;
+	border-color: rgba(56, 189, 248, 0.25) !important;
+	box-shadow: 0 0 40px rgba(56, 189, 248, 0.12);
+}
+
+:root[data-theme="dark"] .nav-brand {
+	background-color: rgba(15, 23, 42, 0.9) !important;
+	border-color: rgba(56, 189, 248, 0.4) !important;
+}
+
+:root[data-theme="dark"] .nav-link {
+	color: rgba(226, 232, 240, 0.78) !important;
+}
+
+:root[data-theme="dark"] .nav-link:hover {
+	background-color: rgba(15, 23, 42, 0.7) !important;
+	color: #e2e8f0 !important;
+}
+
+:root[data-theme="dark"] .nav-link-active {
+	background-color: rgba(14, 116, 144, 0.35) !important;
+	color: #f8fafc !important;
+	box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+}
+
+:root[data-theme="dark"] .nav-pill {
+	background-color: rgba(15, 23, 42, 0.75) !important;
+	border-color: rgba(56, 189, 248, 0.35) !important;
+	color: rgba(226, 232, 240, 0.8) !important;
+}
+
+:root[data-theme="dark"] .nav-cta-ghost {
+	background-color: rgba(15, 23, 42, 0.55) !important;
+	border-color: rgba(56, 189, 248, 0.35) !important;
+	color: rgba(226, 232, 240, 0.88) !important;
+	box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.08), 0 0 18px rgba(56, 189, 248, 0.12);
+}
+
+:root[data-theme="dark"] .nav-cta-ghost:hover {
+	background-color: rgba(15, 23, 42, 0.72) !important;
+	color: #f8fafc !important;
+}
+
+:root[data-theme="dark"] .directory-cta-ghost {
+	background-color: rgba(15, 23, 42, 0.55) !important;
+	border-color: rgba(56, 189, 248, 0.3) !important;
+	color: rgba(226, 232, 240, 0.9) !important;
+	box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.06), 0 0 16px rgba(56, 189, 248, 0.12);
+}
+
+:root[data-theme="dark"] .directory-cta-ghost:hover {
+	background-color: rgba(15, 23, 42, 0.7) !important;
+	color: #f8fafc !important;
+}
+
+:root[data-theme="dark"] .nav-divider {
+	background-color: rgba(148, 163, 184, 0.35) !important;
+}
+
+/* Pills (night mode) */
+:root[data-theme="dark"] .pill {
+	background-color: rgba(15, 23, 42, 0.75) !important;
+	border-color: rgba(56, 189, 248, 0.35) !important;
+	color: rgba(226, 232, 240, 0.85) !important;
+	box-shadow: 0 0 12px rgba(56, 189, 248, 0.12);
+}
+
+/* Mobile nav tuning (night mode) */
+:root[data-theme="dark"] .nav-mobile-surface {
+	background-color: rgba(6, 10, 18, 0.9) !important;
+	border-color: rgba(56, 189, 248, 0.22) !important;
+	box-shadow: 0 0 32px rgba(56, 189, 248, 0.1);
+}
+
+:root[data-theme="dark"] .nav-mobile-link {
+	color: rgba(226, 232, 240, 0.75) !important;
+}
+
+:root[data-theme="dark"] .nav-mobile-link:hover {
+	background-color: rgba(15, 23, 42, 0.6) !important;
+	color: #e2e8f0 !important;
+}
+
+:root[data-theme="dark"] .nav-mobile-active {
+	background-color: rgba(14, 116, 144, 0.32) !important;
+	color: #f8fafc !important;
+	box-shadow: 0 0 12px rgba(56, 189, 248, 0.28);
+}
+
+:root[data-theme="dark"] .nav-mobile-pill {
+	background-color: rgba(15, 23, 42, 0.7) !important;
+	border-color: rgba(56, 189, 248, 0.35) !important;
+	color: rgba(226, 232, 240, 0.8) !important;
+}
+
+/* Theme-aware helper classes */
+.tilt-desc {
+	color: #cbd5e1;
+}
+.tilt-explore {
+	color: #e2e8f0;
+}
+:root[data-theme="light"] .tilt-desc {
+	color: #334155;
+}
+:root[data-theme="light"] .tilt-explore {
+	color: #1f2937;
+}
+
+/* Section band backgrounds (night mode) */
+.section-band {
+	position: relative;
+}
+
+.section-band::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.85;
+	mask-image: linear-gradient(90deg, transparent 0%, black 18%, black 82%, transparent 100%);
+}
+
+.section-band > * {
+	position: relative;
+	z-index: 1;
+}
+
+:root[data-theme="dark"] .section-band--cyan::before {
+	background:
+		radial-gradient(900px 420px at 50% 0%, rgba(56, 189, 248, 0.12), transparent 62%),
+		linear-gradient(180deg, rgba(2, 6, 23, 0.22) 0%, transparent 50%);
+}
+
+:root[data-theme="dark"] .section-band--fuchsia::before {
+	background:
+		radial-gradient(900px 420px at 50% 0%, rgba(217, 70, 239, 0.12), transparent 62%),
+		linear-gradient(180deg, rgba(2, 6, 23, 0.22) 0%, transparent 50%);
+}
+
+:root[data-theme="dark"] .section-band--blue::before {
+	background:
+		radial-gradient(900px 420px at 50% 0%, rgba(59, 130, 246, 0.12), transparent 62%),
+		linear-gradient(180deg, rgba(2, 6, 23, 0.22) 0%, transparent 50%);
+}
+
+:root[data-theme="dark"] .section-band--emerald::before {
+	background:
+		radial-gradient(900px 420px at 50% 0%, rgba(16, 185, 129, 0.12), transparent 62%),
+		linear-gradient(180deg, rgba(2, 6, 23, 0.22) 0%, transparent 50%);
+}
+
 *::selection {
-	background: rgba(255, 255, 255, 0.18);
+	background: rgba(56, 189, 248, 0.28);
 }
 
 @keyframes aurora {
@@ -126,7 +346,7 @@ body {
 	}
 
 	.holo-vignette {
-		background: radial-gradient(120% 80% at 50% 20%, transparent 45%, rgba(2, 6, 23, 0.1) 100%);
+		background: radial-gradient(120% 80% at 50% 20%, transparent 45%, rgba(2, 6, 23, 0.35) 100%);
 	}
 
 	.animate-holo {

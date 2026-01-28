@@ -1,11 +1,11 @@
 // Home section: contact form and domain strategy.
 import { motion } from "framer-motion";
 import { useState } from "react";
-import SectionTitle from "../components/ui/SectionTitle";
-import Button from "../components/ui/Button";
-import { siteContent } from "../data/site";
-import SectionGlow from "../components/effects/SectionGlow";
-import SectionScrollFx from "../components/effects/SectionScrollFx";
+import SectionTitle from "../../components/ui/SectionTitle";
+import Button from "../../components/ui/Button";
+import { siteContent } from "../../data/site";
+import SectionGlow from "../../components/effects/SectionGlow";
+import SectionScrollFx from "../../components/effects/SectionScrollFx";
 
 export default function ContactSection() {
   const [status, setStatus] = useState("idle");
@@ -46,7 +46,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden pt-20">
+    <section id="contact" className="section-band section-band--blue relative overflow-hidden pt-20">
       <SectionGlow variant="fuchsia" drift={32} />
       <SectionScrollFx distance={22} rotate={0.35} skewX={0.35} enabled={false}>
         <SectionTitle
@@ -96,7 +96,14 @@ export default function ContactSection() {
                   <Button type="submit" disabled={status === "loading"}>
                     {status === "loading" ? "Sending..." : "Send"}
                   </Button>
-                  <Button type="button" variant="ghost" onClick={() => alert("Add Calendly / booking flow next.")}>Book a call</Button>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    className="directory-cta-ghost"
+                    onClick={() => alert("Add Calendly / booking flow next.")}
+                  >
+                    Book a call
+                  </Button>
                 </div>
 
                 <p className="text-xs text-slate-500">{siteContent.contact.tip}</p>
@@ -115,25 +122,25 @@ export default function ContactSection() {
             </div>
 
             <div className="relative p-6 md:col-span-2">
-              <div className="absolute inset-0 bg-[radial-gradient(700px_500px_at_30%_0%,rgba(255,255,255,0.16),transparent_60%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(700px_500px_at_30%_0%,rgba(56,189,248,0.12),transparent_60%)]" />
               <div className="relative">
                 <h4 className="text-sm font-semibold text-slate-900">Domain strategy</h4>
                 <div className="mt-3 space-y-3 text-sm text-slate-700">
-                  <div className="rounded-2xl border border-cyan-300/40 bg-white px-4 py-3">
+                  <div className="rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3">
                     <div className="font-semibold text-slate-900">innovaapps.ca</div>
                     <div className="mt-1">The studio umbrella</div>
                   </div>
-                  <div className="rounded-2xl border border-cyan-300/40 bg-white px-4 py-3">
+                  <div className="rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3">
                     <div className="font-semibold text-slate-900">humberto.innovaapps.ca</div>
                     <div className="mt-1">Subdomain MVP</div>
                   </div>
-                  <div className="rounded-2xl border border-cyan-300/40 bg-white px-4 py-3">
+                  <div className="rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3">
                     <div className="font-semibold text-slate-900">humberto.ai</div>
                     <div className="mt-1">Standalone when it grows</div>
                   </div>
                 </div>
 
-                <div className="mt-5 rounded-2xl border border-cyan-300/40 bg-white px-4 py-3 text-xs text-slate-600">
+                <div className="mt-5 rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3 text-xs text-slate-600">
                   Want a brand vibe? Swap the monochrome palette for a signature accent later.
                 </div>
               </div>

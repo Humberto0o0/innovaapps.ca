@@ -28,7 +28,7 @@ export default function SectionTitle({ eyebrow, title, desc }) {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6, delay: reducedMotion ? 0 : 0.1 }}
       >
-        <span className="bg-gradient-to-r from-cyan-500 via-slate-900 to-fuchsia-500 bg-clip-text text-transparent">
+        <span className="section-title-gradient bg-gradient-to-r from-cyan-500 via-slate-900 to-fuchsia-500 bg-clip-text text-transparent">
           {title}
         </span>
       </motion.h2>
