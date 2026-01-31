@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cx } from "../../utils/cx";
 
-export default function ButtonLink({ to, href, external = false, variant = "primary", className, children }) {
+export default function ButtonLink({ to, href, external = false, variant = "primary", className, children, ...props }) {
   const base =
     "group inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black/60";
   const styles =
@@ -18,6 +18,7 @@ export default function ButtonLink({ to, href, external = false, variant = "prim
         href={href}
         target={external ? "_blank" : undefined}
         rel={external ? "noreferrer" : undefined}
+        {...props}
       >
         {children}
         <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
@@ -26,7 +27,7 @@ export default function ButtonLink({ to, href, external = false, variant = "prim
   }
 
   return (
-    <Link className={cx(base, styles, className)} to={to}>
+    <Link className={cx(base, styles, className)} to={to} {...props}>
       {children}
       <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
     </Link>

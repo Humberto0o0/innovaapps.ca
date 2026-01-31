@@ -10,8 +10,6 @@ import WorkSection from "../work/WorkSection";
 import FeaturedAppsSection from "./sections/FeaturedAppsSection";
 import StackSection from "../stack/StackSection";
 import MotionGuideSection from "./sections/MotionGuideSection";
-import AppsSection from "../apps/AppsSection";
-import SocialProofSection from "./sections/SocialProofSection";
 import StorySection from "./sections/StorySection";
 import ConversionSection from "./sections/ConversionSection";
 import ContactSection from "../contact/ContactSection";
@@ -39,8 +37,6 @@ export default function HomePage() {
             <FeaturedAppsSection />
             <StackSection />
             <MotionGuideSection />
-            <AppsSection />
-            <SocialProofSection />
             <StorySection />
             <ConversionSection />
             <ContactSection />

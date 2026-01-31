@@ -38,14 +38,23 @@ export default function MotionGuideSection() {
                 <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-700">{item.desc}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {item.tokens.map((token) => (
-                    <span
-                      key={token}
-                      className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-700"
-                    >
-                      {token}
-                    </span>
-                  ))}
+                  {item.tokens.map((token, tokenIndex) => {
+                    const tones = [
+                      "border-cyan-200/70 bg-cyan-50 text-cyan-700",
+                      "border-fuchsia-200/70 bg-fuchsia-50 text-fuchsia-700",
+                      "border-blue-200/70 bg-blue-50 text-blue-700",
+                    ];
+                    const tone = tones[tokenIndex % tones.length];
+
+                    return (
+                      <span
+                        key={token}
+                        className={`rounded-full border px-3 py-1 text-xs ${tone}`}
+                      >
+                        {token}
+                      </span>
+                    );
+                  })}
                 </div>
               </motion.div>
             );

@@ -17,7 +17,7 @@
     "ctaSecondary": "How we build"
   },
   "featuredApps": {
-    "eyebrow": "Now building",
+    "eyebrow": "What’s being built under the Innova umbrella",
     "title": "What’s live under the Innova umbrella",
     "desc": "A snapshot of current builds. Some are public and some are in progress. Everything is created to test real usage and iterate fast.",
     "cta": "Explore the directory",
@@ -55,34 +55,34 @@
     "growDesc": "Products begin inside the studio, prove their value, and earn independence as they grow."
   },
   "stack": {
-    "eyebrow": "What it’s built with",
+    "eyebrow": "Our build system",
     "title": "A clean system for apps, plugins, and websites",
-    "desc": "React plus a reusable UI system built to ship fast without sacrificing polish. Motion, components, and structure are shared across products."
+    "desc": "A modern React-based UI system powers new products, while existing apps evolve and migrate over time. Shared motion, components, and structure keep everything fast, consistent, and scalable."
   },
   "motionGuide": {
-    "eyebrow": "Motion guide",
-    "title": "Motion that feels premium and not loud",
-    "desc": "Consistent motion rules keep interactions crisp, readable, and intentional, especially on light UI.",
+    "eyebrow": "Product principles",
+    "title": "Polished products that feel effortless",
+    "desc": "From idea to production, we care about how products feel, not just how they look.",
     "principles": [
       {
-        "title": "Fast in, soft out",
-        "desc": "Small UI responses happen quickly, then ease out for polish.",
-        "tokens": ["180–260ms", "easeOut", "spring: 220/18"]
+        "title": "Fast by default",
+        "desc": "Interfaces respond instantly with clear feedback, loading states, and smooth transitions.",
+        "tokens": ["snappy feedback", "loading states", "clear response"]
       },
       {
-        "title": "Depth, not bounce",
-        "desc": "Use subtle lift and glow instead of overshoot and wobble.",
-        "tokens": ["hover: -6px", "shadow: glow", "opacity: 0.85"]
+        "title": "Clarity over noise",
+        "desc": "Clean hierarchy and calm UI decisions so the product stays readable and focused.",
+        "tokens": ["typography", "spacing", "focus states"]
       },
       {
-        "title": "Scroll reveals",
-        "desc": "Sections reveal on entry with a consistent offset and calm timing.",
-        "tokens": ["y: 12", "duration: 0.6s", "once: true"]
+        "title": "Real product logic",
+        "desc": "Built around real flows—state, validation, async updates, and edge cases that matter in production.",
+        "tokens": ["state + DOM", "AJAX flows", "error handling"]
       },
       {
-        "title": "Pointer parallax",
-        "desc": "Keep parallax subtle and responsive to reduce fatigue.",
-        "tokens": ["offset: 0.4", "stiffness: 60", "mass: 0.6"]
+        "title": "Built to evolve",
+        "desc": "Modular structure that supports iteration, refactors, plugins, and migrations as products grow.",
+        "tokens": ["modular code", "scalable structure", "easy iteration"]
       }
     ]
   },
@@ -155,7 +155,7 @@
     "stats": [
       { "value": "3", "label": "Core product tracks" },
       { "value": "1", "label": "Flagship live build" },
-      { "value": "∞", "label": "Ideas in the pipeline" }
+      { "value": "∞", "label": "Ongoing exploration" }
     ]
   },
   "conversion": {

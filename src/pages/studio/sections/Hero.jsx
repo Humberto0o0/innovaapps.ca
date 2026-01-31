@@ -6,7 +6,7 @@ import FloatingOrbs from "../../../components/effects/FloatingOrbs";
 import MouseGlow from "../../../components/effects/MouseGlow";
 import NoiseOverlay from "../../../components/effects/NoiseOverlay";
 import AuroraGlow from "../../../components/effects/AuroraGlow";
-import Button from "../../../components/ui/Button";
+import ButtonLink from "../../../components/ui/ButtonLink";
 import Pill from "../../../components/ui/Pill";
 import TiltCard from "../../../components/cards/TiltCard";
 import Marquee from "../../../components/Marquee";
@@ -42,7 +42,7 @@ export default function Hero({ x, y }) {
 
   return (
     <header ref={heroRef} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(1200px_700px_at_50%_20%,rgba(56,189,248,0.18),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_700px_at_50%_20%,rgba(56,189,248,0.18),transparent_55%)]" />
       <AuroraGlow />
       {siteContent.background?.mode === "three" && !reducedMotion && canRenderThree ? (
         <Suspense fallback={null}>
@@ -55,7 +55,7 @@ export default function Hero({ x, y }) {
       {!reducedMotion && <MouseGlow x={x} y={y} />}
       <NoiseOverlay />
 
-      <Container className="pb-28 pt-14 sm:pb-24 sm:pt-20">
+      <Container className="relative z-10 pb-28 pt-14 sm:pb-24 sm:pt-20">
         <motion.div style={{ y: heroY, opacity: heroOpacity }}>
           <div className="flex flex-col items-center text-center">
             <div className="flex flex-wrap items-center justify-center gap-2">
@@ -101,16 +101,28 @@ export default function Hero({ x, y }) {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-8 flex flex-col items-center gap-3 sm:flex-row"
             >
-              <Button onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}>
+              <ButtonLink
+                href="#apps"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("apps")?.scrollIntoView({ behavior: "smooth" });
+                  window.history.replaceState(null, "", "#apps");
+                }}
+              >
                 {siteContent.hero.ctaPrimary}
-              </Button>
-              <Button
+              </ButtonLink>
+              <ButtonLink
+                href="#stack"
                 variant="ghost"
                 className="directory-cta-ghost"
-                onClick={() => document.getElementById("stack")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("stack")?.scrollIntoView({ behavior: "smooth" });
+                  window.history.replaceState(null, "", "#stack");
+                }}
               >
                 {siteContent.hero.ctaSecondary}
-              </Button>
+              </ButtonLink>
             </motion.div>
 
             <div className="mt-12 grid w-full gap-4 md:grid-cols-3">

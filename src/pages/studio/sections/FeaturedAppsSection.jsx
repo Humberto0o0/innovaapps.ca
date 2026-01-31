@@ -13,7 +13,7 @@ export default function FeaturedAppsSection() {
       pillBorder: "border-cyan-200",
       metric: "text-cyan-600",
       glow: "bg-cyan-400/25",
-      glowPos: "-right-10 -top-10",
+      glowPos: "-left-10 -top-10",
     },
     {
       cardBorder: "border-fuchsia-300/40",
