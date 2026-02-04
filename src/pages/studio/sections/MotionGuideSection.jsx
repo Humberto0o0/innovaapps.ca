@@ -29,12 +29,15 @@ export default function MotionGuideSection() {
             return (
               <motion.div
                 key={item.title}
-                className={`rounded-3xl border bg-white p-6 shadow-[0_0_30px_rgba(56,189,248,0.12)] ${border}`}
+                className={`group relative overflow-hidden rounded-3xl border bg-white p-6 shadow-[0_0_30px_rgba(56,189,248,0.12)] ${border}`}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.6, delay: index * 0.06 }}
+                whileHover={{ y: -6, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ duration: 0.6, delay: index * 0.06, type: "spring", stiffness: 220, damping: 18 }}
               >
+                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-cyan-400/15 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-700">{item.desc}</p>
                 <div className="mt-4 flex flex-wrap gap-2">

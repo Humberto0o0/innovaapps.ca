@@ -3,7 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
-function ParticleSphere({ count = 2400, radius = 1.6, x, y }) {
+function ParticleSphere({ count = 2400, radius = 1.6, size = 0.03, segments = 32, x, y }) {
   const pointsRef = useRef(null);
   const groupRef = useRef(null);
 
@@ -65,7 +65,7 @@ function ParticleSphere({ count = 2400, radius = 1.6, x, y }) {
           />
         </bufferGeometry>
         <pointsMaterial
-          size={0.03}
+          size={size}
           color={new THREE.Color("#7dd3fc")}
           transparent
           opacity={0.55}
@@ -76,7 +76,7 @@ function ParticleSphere({ count = 2400, radius = 1.6, x, y }) {
       </points>
 
       <mesh rotation={[0.2, 0.1, 0]}>
-        <sphereGeometry args={[1.25, 32, 32]} />
+        <sphereGeometry args={[1.25, segments, segments]} />
         <meshBasicMaterial
           color={new THREE.Color("#38bdf8")}
           transparent
@@ -90,11 +90,34 @@ function ParticleSphere({ count = 2400, radius = 1.6, x, y }) {
 
 export default function ThreeBackground({ x, y }) {
   const [count, setCount] = useState(1800);
+  const [dpr, setDpr] = useState(1.25);
+  const [segments, setSegments] = useState(32);
+  const [pointSize, setPointSize] = useState(0.03);
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
     const update = () => {
       const width = window.innerWidth;
+      const height = window.innerHeight;
+      const pixelRatio = window.devicePixelRatio || 1;
+      const area = width * height;
+
+      if (area > 3500000 || pixelRatio > 1.6) {
+        setCount(900);
+        setDpr(1);
+        setSegments(18);
+        setPointSize(0.025);
+        return;
+      }
+
+      if (area > 2200000) {
+        setCount(1400);
+        setDpr(Math.min(1.15, pixelRatio));
+        setSegments(24);
+        setPointSize(0.028);
+        return;
+      }
+
       if (width < 768) {
         setCount(1100);
       } else if (width < 1280) {
@@ -102,6 +125,9 @@ export default function ThreeBackground({ x, y }) {
       } else {
         setCount(2200);
       }
+      setDpr(Math.min(1.25, pixelRatio));
+      setSegments(32);
+      setPointSize(0.03);
     };
     update();
     window.addEventListener("resize", update);
@@ -111,14 +137,14 @@ export default function ThreeBackground({ x, y }) {
   return (
     <div className="pointer-events-none absolute inset-0" style={{ filter: "blur(0.6px)" }}>
       <Canvas
-        dpr={[1, 1.25]}
+        dpr={dpr}
         gl={{ alpha: true, antialias: false, powerPreference: "high-performance" }}
         camera={{ position: [0, 0, 4], fov: 45 }}
       >
         <ambientLight intensity={0.45} />
         <pointLight position={[3, 2, 4]} intensity={0.9} color="#7dd3fc" />
         <pointLight position={[-3, -2, -4]} intensity={0.55} color="#60a5fa" />
-        <ParticleSphere count={count} x={x} y={y} />
+        <ParticleSphere count={count} size={pointSize} segments={segments} x={x} y={y} />
       </Canvas>
     </div>
   );

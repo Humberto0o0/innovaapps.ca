@@ -134,10 +134,10 @@
   },
   "story": {
     "eyebrow": "Studio story",
-    "title": "A studio designed to keep shipping",
-    "desc": "InnovaApps exists to build and evolve products without losing polish, from first MVP to standalone brand.",
-    "panelTitle": "How the studio works",
-    "panelDesc": "We build in validated steps. We ship something small, learn from real usage, then expand into a full product surface.",
+    "title": "Built to create products that actually get used",
+    "desc": "InnovaApps was created to build useful, well-crafted products that people actually rely on. We focus on real problems, real usage, and long-term quality, not demos or hype.",
+    "panelTitle": "Why this studio exists",
+    "panelDesc": "We started InnovaApps to create products we wished existed. Tools that are practical, thoughtful, and built to last. Everything here is shaped by real usage, not trends.",
     "highlights": [
       {
         "title": "Start small",
@@ -153,9 +153,21 @@
       }
     ],
     "stats": [
-      { "value": "3", "label": "Core product tracks" },
-      { "value": "1", "label": "Flagship live build" },
-      { "value": "∞", "label": "Ongoing exploration" }
+      {
+        "value": "3",
+        "label": "Core product tracks",
+        "desc": "Apps, plugins, and web products built with different scopes and lifecycles."
+      },
+      {
+        "value": "1",
+        "label": "Flagship live product",
+        "desc": "One actively maintained product that anchors the studio and informs everything else."
+      },
+      {
+        "value": "∞",
+        "label": "Ongoing exploration",
+        "desc": "New ideas and experiments shaped by real problems, not trends."
+      }
     ]
   },
   "conversion": {

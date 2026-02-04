@@ -106,7 +106,6 @@ export default function ContactSection() {
                   </Button>
                 </div>
 
-                <p className="text-xs text-slate-500">{siteContent.contact.tip}</p>
                 {note && (
                   <p
                     className={
@@ -124,24 +123,44 @@ export default function ContactSection() {
             <div className="relative p-6 md:col-span-2">
               <div className="absolute inset-0 bg-[radial-gradient(700px_500px_at_30%_0%,rgba(56,189,248,0.12),transparent_60%)]" />
               <div className="relative">
-                <h4 className="text-sm font-semibold text-slate-900">Domain strategy</h4>
+                <h4 className="text-sm font-semibold text-slate-900">What we’re a good fit for</h4>
                 <div className="mt-3 space-y-3 text-sm text-slate-700">
-                  <div className="rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3">
-                    <div className="font-semibold text-slate-900">innovaapps.ca</div>
-                    <div className="mt-1">The studio umbrella</div>
-                  </div>
-                  <div className="rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3">
-                    <div className="font-semibold text-slate-900">humberto.innovaapps.ca</div>
-                    <div className="mt-1">Subdomain MVP</div>
-                  </div>
-                  <div className="rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3">
-                    <div className="font-semibold text-slate-900">humberto.ai</div>
-                    <div className="mt-1">Standalone when it grows</div>
-                  </div>
+                  {[
+                    {
+                      title: "An MVP or early build",
+                      desc: "You have something started and want help refining, scaling, or polishing it.",
+                      border: "border-cyan-300/50",
+                      glow: "bg-cyan-400/15",
+                    },
+                    {
+                      title: "A plugin or internal tool",
+                      desc: "WordPress plugins, utilities, or tools that solve a specific workflow problem.",
+                      border: "border-fuchsia-300/50",
+                      glow: "bg-fuchsia-400/15",
+                    },
+                    {
+                      title: "A focused collaboration",
+                      desc: "Small teams or founders looking to work closely, not outsource everything.",
+                      border: "border-emerald-300/50",
+                      glow: "bg-emerald-400/15",
+                    },
+                  ].map((item) => (
+                    <motion.div
+                      key={item.title}
+                      className={`group relative overflow-hidden rounded-2xl border bg-white px-4 py-3 transition ${item.border}`}
+                      whileHover={{ y: -4, scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                      transition={{ type: "spring", stiffness: 240, damping: 18 }}
+                    >
+                      <div className={`pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${item.glow}`} />
+                      <div className="font-semibold text-slate-900">{item.title}</div>
+                      <div className="mt-1">{item.desc}</div>
+                    </motion.div>
+                  ))}
                 </div>
 
-                <div className="mt-5 rounded-2xl border border-cyan-300/40 bg-black/30 px-4 py-3 text-xs text-slate-600">
-                  Want a brand vibe? Swap the monochrome palette for a signature accent later.
+                <div className="mt-5 rounded-2xl border border-cyan-300/50 bg-white px-4 py-3 text-xs text-slate-600 shadow-[0_0_16px_rgba(56,189,248,0.12)]">
+                  You don’t need everything figured out. If there’s a real problem behind it, we’re happy to take a look.
                 </div>
               </div>
             </div>
