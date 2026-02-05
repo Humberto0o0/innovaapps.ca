@@ -6,10 +6,9 @@ export const siteContent = content;
 
 export const navLinks = [
   { href: "/", label: "Studio", type: "route" },
-  { href: "#work", label: "Work", type: "section" },
-  { href: "#stack", label: "Stack", type: "section" },
-  { href: "#apps", label: "Apps", type: "section" },
-  { href: "/apps", label: "Directory", type: "route" },
+  { href: "#work", label: "Products", type: "section" },
+  { href: "#stack", label: "How We Build", type: "section" },
+  { href: "/apps", label: "Apps", type: "route" },
   { href: "#contact", label: "Contact", type: "section" },
 ];
 

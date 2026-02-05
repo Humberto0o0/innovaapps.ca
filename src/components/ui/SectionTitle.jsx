@@ -33,7 +33,7 @@ export default function SectionTitle({ eyebrow, title, desc }) {
         </span>
       </motion.h2>
       <motion.p
-        className="mt-3 text-base leading-relaxed text-slate-700"
+        className="mt-3 text-sm leading-relaxed text-slate-700"
         initial={{ opacity: 0, y: 6 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}

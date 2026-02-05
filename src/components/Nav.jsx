@@ -114,7 +114,11 @@ export default function Nav() {
               <Wand2 className="h-5 w-5 text-cyan-700" />
             </div>
             <div>
-              <div className="text-sm font-semibold text-white tracking-tight">{siteContent.brand.name}</div>
+              <div className="text-sm font-semibold tracking-tight">
+                <span className="brand-gradient bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">
+                  {siteContent.brand.name}
+                </span>
+              </div>
               <div className="text-xs text-white/60">{siteContent.brand.tagline}</div>
             </div>
           </div>
@@ -174,7 +178,7 @@ export default function Nav() {
             </Button>
             <Button
               className="hidden lg:inline-flex"
-              onClick={() => document.getElementById("apps")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => navigate("/apps")}
             >
               View apps
             </Button>
@@ -234,7 +238,7 @@ export default function Nav() {
               <Button
                 className="w-full"
                 onClick={() => {
-                  document.getElementById("apps")?.scrollIntoView({ behavior: "smooth" });
+                  navigate("/apps");
                   setIsMenuOpen(false);
                 }}
               >

@@ -101,14 +101,7 @@ export default function Hero({ x, y }) {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-8 flex flex-col items-center gap-3 sm:flex-row"
             >
-              <ButtonLink
-                href="#apps"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("apps")?.scrollIntoView({ behavior: "smooth" });
-                  window.history.replaceState(null, "", "#apps");
-                }}
-              >
+              <ButtonLink to="/apps">
                 {siteContent.hero.ctaPrimary}
               </ButtonLink>
               <ButtonLink

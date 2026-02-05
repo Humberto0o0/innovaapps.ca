@@ -64,15 +64,18 @@ export default function StorySection() {
               const accent = accents[index % accents.length];
 
               return (
-              <div
+              <motion.div
                 key={stat.label}
                 className={`rounded-3xl border bg-white p-6 shadow-[0_0_40px_rgba(56,189,248,0.16)] ${accent.border}`}
+                whileHover={{ y: -6, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ type: "spring", stiffness: 220, damping: 18 }}
               >
                 <div className={`text-lg font-semibold ${accent.text}`}>{stat.label}</div>
                 {stat.desc ? (
                   <div className="mt-2 text-xs text-slate-500">{stat.desc}</div>
                 ) : null}
-              </div>
+              </motion.div>
               );
             })}
           </motion.div>

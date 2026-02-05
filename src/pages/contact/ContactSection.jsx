@@ -81,7 +81,7 @@ export default function ContactSection() {
                   name="email"
                   autoComplete="email"
                   className="w-full rounded-2xl border border-cyan-300/40 bg-white px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30"
-                  placeholder="you@domain.com"
+                  placeholder="you@company.com"
                 />
                 <label className="mt-2 text-sm text-slate-700" htmlFor="contact-message">What are you building?</label>
                 <textarea
@@ -89,7 +89,7 @@ export default function ContactSection() {
                   name="message"
                   rows={4}
                   className="w-full resize-none rounded-2xl border border-cyan-300/40 bg-white px-4 py-3 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30"
-                  placeholder="Tell me about the app, plugin, or idea..."
+                  placeholder="Briefly describe the product, its goal, and what kind of help you’re looking for."
                 />
 
                 <div className="mt-2 flex flex-col gap-2 sm:flex-row">
@@ -131,18 +131,21 @@ export default function ContactSection() {
                       desc: "You have something started and want help refining, scaling, or polishing it.",
                       border: "border-cyan-300/50",
                       glow: "bg-cyan-400/15",
+                      titleColor: "text-cyan-700",
                     },
                     {
                       title: "A plugin or internal tool",
                       desc: "WordPress plugins, utilities, or tools that solve a specific workflow problem.",
                       border: "border-fuchsia-300/50",
                       glow: "bg-fuchsia-400/15",
+                      titleColor: "text-fuchsia-700",
                     },
                     {
                       title: "A focused collaboration",
                       desc: "Small teams or founders looking to work closely, not outsource everything.",
                       border: "border-emerald-300/50",
                       glow: "bg-emerald-400/15",
+                      titleColor: "text-emerald-700",
                     },
                   ].map((item) => (
                     <motion.div
@@ -153,7 +156,7 @@ export default function ContactSection() {
                       transition={{ type: "spring", stiffness: 240, damping: 18 }}
                     >
                       <div className={`pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${item.glow}`} />
-                      <div className="font-semibold text-slate-900">{item.title}</div>
+                      <div className={`font-semibold ${item.titleColor}`}>{item.title}</div>
                       <div className="mt-1">{item.desc}</div>
                     </motion.div>
                   ))}

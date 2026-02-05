@@ -55,8 +55,8 @@
     "growDesc": "Products begin inside the studio, prove their value, and earn independence as they grow."
   },
   "stack": {
-    "eyebrow": "Our build system",
-    "title": "A clean system for apps, plugins, and websites",
+    "eyebrow": "How we build",
+    "title": "How we build apps, plugins, and websites",
     "desc": "A modern React-based UI system powers new products, while existing apps evolve and migrate over time. Shared motion, components, and structure keep everything fast, consistent, and scalable."
   },
   "motionGuide": {
@@ -89,7 +89,7 @@
   "apps": {
     "eyebrow": "Directory",
     "title": "Explore what the studio is building",
-    "desc": "Apps, plugins, and web products. Some are live and some are experimental. Everything is built to learn fast and scale cleanly.",
+    "desc": "Two products under the Innova umbrella. One live and one evolving. Both built with the same production-ready system.",
     "ctaTitle": "Want to collaborate?",
     "ctaDesc": "We occasionally partner with founders and teams when the fit is strong. This is especially true for motion first landing pages, plugin concepts, and MVP launches.",
     "ctaPrimary": "Start a conversation",
@@ -185,46 +185,32 @@
   },
   "appsList": [
     {
-      "name": "My Perfect Routine APP",
-      "slug": "humberto-ai",
+      "name": "My Perfect Routine",
+      "slug": "my-perfect-routine",
       "status": "Live",
-      "blurb": "A flagship build under the Innova umbrella, shipped, iterated, and improved in public.",
-      "tagline": "AI experiences with premium UX.",
-      "description": "My Perfect Routine APP is a flagship product built inside the studio. It starts under the Innova umbrella and can evolve into a standalone brand as it grows.",
+      "blurb": "A focused habit and routine app built to support consistency without overwhelm. Designed, shipped, and iterated in public.",
+      "tagline": "iOS app. Subscription product. Real users.",
+      "description": "A guided daily routine app built to help people start and end their day with intention, clarity, and consistency.",
       "features": [
-        "Context-aware AI workflows",
-        "Plugin-ready architecture",
-        "Motion-first UI system",
-        "Scalable path to standalone"
+        "Guided morning routines",
+        "Affirmations and gratitude prompts",
+        "Calm motion-first UI",
+        "Modular routine engine"
       ],
-      "url": "https://humberto.ai"
+      "url": "https://myperfectroutine.com"
     },
     {
-      "name": "Plugin Studio",
-      "slug": "plugin-studio",
-      "status": "Shipping",
-      "blurb": "Small utilities, shipped fast, kept polished through a shared system.",
-      "tagline": "A factory for useful tools.",
-      "description": "Plugin Studio is where fast ideas become real tools. It’s the experimentation engine for InnovaApps and the place where plugins become products.",
+      "name": "Humberto AI",
+      "slug": "humberto-ai",
+      "status": "In progress",
+      "blurb": "An AI assistant for WordPress that delivers accurate and contextual answers using a site’s own content.",
+      "tagline": "RAG powered. Plugin first. Built for production sites.",
+      "description": "An AI assistant for WordPress that delivers accurate and contextual answers using a site’s own content.",
       "features": [
         "Rapid iteration pipeline",
         "Reusable UI and motion system",
         "Launch-ready templates",
         "Telemetry-ready structure"
-      ]
-    },
-    {
-      "name": "Innova Cloud",
-      "slug": "innova-cloud",
-      "status": "In progress",
-      "blurb": "Shared auth, analytics, and deployments for the studio ecosystem.",
-      "tagline": "Shared services for every build.",
-      "description": "Innova Cloud unifies common infrastructure across products so each new build starts with a production grade foundation.",
-      "features": [
-        "Unified auth",
-        "Analytics and insights",
-        "Shared deployments",
-        "Multi product observability"
       ]
     }
   ]

@@ -13,8 +13,8 @@ export default function DirectoryPage() {
       <main>
         <Container className="pb-24 pt-16">
           <SectionTitle
-            eyebrow="App directory"
-            title="Explore the Innova ecosystem"
+            eyebrow="Apps"
+            title="Explore the Innova apps"
             desc={siteContent.apps.desc}
           />
 

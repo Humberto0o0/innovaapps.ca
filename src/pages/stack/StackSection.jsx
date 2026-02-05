@@ -25,7 +25,9 @@ export default function StackSection() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 220, damping: 18 }}
           >
             <h3 className="text-lg font-semibold text-slate-900">Thoughtful UI behavior</h3>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
@@ -43,7 +45,9 @@ export default function StackSection() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: 0.08 }}
+            whileHover={{ y: -6, scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            transition={{ duration: 0.6, delay: 0.08, type: "spring", stiffness: 220, damping: 18 }}
           >
             <h3 className="text-lg font-semibold text-slate-900">Built to evolve</h3>
             <ul className="mt-4 space-y-2 text-sm text-slate-700">
@@ -62,7 +66,9 @@ export default function StackSection() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
+          whileHover={{ y: -4, scale: 1.005 }}
+          whileTap={{ scale: 0.99 }}
+          transition={{ duration: 0.6, type: "spring", stiffness: 200, damping: 18 }}
         >
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <div>
