@@ -30,11 +30,11 @@ import dashboardTwo from "../../assets/Humberto Dashboard 2.png";
 import dashboardThree from "../../assets/Humberto Dashboard 3.png";
 import dashboardFour from "../../assets/Humberto Dashboard 4.png";
 import dashboardFive from "../../assets/Humberto Dashboard 5.png";
-import { appTiles } from "../../data/site";
+import { getAppBySlug } from "../../lib/apps";
 
 export default function AppDetailPage() {
   const { slug } = useParams();
-  const app = useMemo(() => appTiles.find((item) => item.slug === slug), [slug]);
+  const app = useMemo(() => getAppBySlug(slug), [slug]);
   const { reducedMotion } = useMotionSettings();
   const { x, y } = useRafMouse(!reducedMotion);
   const carouselRef = useRef(null);
